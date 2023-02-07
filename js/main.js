@@ -1,6 +1,7 @@
 const elList = document.querySelector("#content");
 const elSearch = document.querySelector("#search");
 
+// render films
 function renderFilm(array) {
   for (let i = 0; i < array.length; i++) {
     const otherDate = new Date(array[i].release_date);
@@ -16,7 +17,6 @@ function renderFilm(array) {
         </li>
     `;
     const ul = document.createElement("ul");
-
     // genres section
     array[i].genres.forEach((genre) => {
       const p = document.createElement("p");
@@ -35,7 +35,7 @@ renderFilm(films);
 films.forEach((film) => {
   // delete
 
-  li.addEventListener("click", function (evt) {
+  elList.addEventListener("click", function (evt) {
     const element = evt.target;
 
     if (element.className.includes("btn")) {
@@ -49,20 +49,26 @@ films.forEach((film) => {
           result.push(item);
         }
       }
-      li.textContent = "";
+      elList.textContent = "";
+      films = result;
+      renderFilm(films);
     }
   });
+});
 
-  elSearch.addEventListener("input", () => {
-    const inputValue = elSearch.value;
-    let searchArray = [];
+// search section
 
-    films.forEach((text) => {
-      if (text.title.toLowerCase().includes(inputValue.toLowerCase())) {
-        searchArray.push(text);
-      }
-    });
-    // elList.append(searchArray);
-    li.textContent = "";
+elSearch.addEventListener("input", () => {
+  const inputValue = elSearch.value;
+
+  let searchArray = films.filter((text) => {
+    if (text.title.toLowerCase().includes(inputValue.toLowerCase())) {
+      return text;
+    }
+    if (text.overview.toLowerCase().includes(inputValue.toLowerCase())) {
+      return text;
+    }
   });
+  elList.textContent = "";
+  renderFilm(searchArray);
 });
