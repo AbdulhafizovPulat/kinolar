@@ -53,7 +53,7 @@ body {
   flex-wrap: wrap;
 }
 .list__item {
-  max-width: 250px;
+  max-width: 200px;
   margin: 10px 0;
 }
 .list__item h5 {
