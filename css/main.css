@@ -1,0 +1,111 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(239, 246, 233);
+  background: linear-gradient(90deg, rgb(239, 246, 233) 0%, rgb(212, 230, 228) 43%, rgb(183, 223, 201) 100%);
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 20px 0;
+  background: rgb(10, 0, 36);
+  background: linear-gradient(90deg, rgb(10, 0, 36) 0%, rgb(9, 47, 121) 43%, rgb(136, 0, 255) 100%);
+}
+.header .form {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.header__card {
+  display: flex;
+  justify-content: space-between;
+}
+.header__card .search-btn {
+  padding: 3px;
+  border-radius: 5px;
+  border: none;
+}
+.header .header__list {
+  display: flex;
+  gap: 50px;
+}
+.header__item a {
+  color: rgb(201, 208, 214);
+}
+.header__item a:hover {
+  color: burlywood;
+}
+
+.list {
+  padding: 20px 0;
+  margin-left: 50px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.list__item {
+  max-width: 200px;
+  margin: 10px 0;
+}
+.list__item h5 {
+  color: rgb(66, 65, 71);
+  margin-bottom: 5px;
+}
+.list__item p {
+  margin: 10px 0;
+}
+.list__img {
+  width: 100%;
+}
+
+.info {
+  height: 100px;
+  overflow: auto;
+}
+
+.genries {
+  color: rgb(216, 76, 151);
+}
+
+span {
+  opacity: 0.5;
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: red;
+  border-radius: 10px;
+  border: none;
+  color: antiquewhite;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.footer {
+  margin-top: 5%;
+  padding: 30px;
+  background: rgb(10, 0, 36);
+  background: linear-gradient(90deg, rgb(10, 0, 36) 0%, rgb(9, 47, 121) 43%, rgb(136, 0, 255) 100%);
+}
+.footer__list {
+  display: flex;
+  gap: 50px;
+}/*# sourceMappingURL=main.css.map */
