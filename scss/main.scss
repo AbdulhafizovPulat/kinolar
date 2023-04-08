@@ -5,40 +5,41 @@
   padding: 0;
 }
 body {
-  background: rgb(239, 246, 233);
-  background: linear-gradient(
-    90deg,
-    rgba(239, 246, 233, 1) 0%,
-    rgba(212, 230, 228, 1) 43%,
-    rgba(183, 223, 201, 1) 100%
-  );
+  background-color: black;
 }
 .container {
-  max-width: 1040px;
+  width: 1040px;
   margin: 0 auto;
 }
 // nav
+.tab {
+  margin: 30px auto;
+  button {
+    padding: 4px;
+  }
+}
 .header {
   padding: 20px 0;
-  background: rgb(10, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(10, 0, 36, 1) 0%,
-    rgba(9, 47, 121, 1) 43%,
-    rgba(136, 0, 255, 1) 100%
-  );
+  background-color: rgba(14, 10, 19, 0.977);
+
   .form {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
   }
   &__card {
     display: flex;
     justify-content: space-between;
     .search-btn {
-      padding: 3px;
+      margin-left: 5px;
+      padding: 5px;
       border-radius: 5px;
       border: none;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.941);
+      }
     }
   }
   .header__list {
@@ -47,30 +48,46 @@ body {
   }
   &__item {
     a {
-      color: rgb(201, 208, 214);
+      color: rgb(248, 252, 255);
       &:hover {
-        color: burlywood;
+        color: rgba(56, 126, 9, 0.881);
       }
     }
   }
 }
 
 // dynamic section
+.tab {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  gap: 10px;
+  button {
+    padding: 10px;
+    border: none;
+    background-color: rgb(20, 16, 17);
+    color: white;
+    &:active {
+      background-color: white;
+      color: rgb(20, 16, 17);
+    }
+  }
+}
 .list {
   padding: 20px 0;
-  margin-left: 50px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
   gap: 30px;
-  flex-wrap: wrap;
   &__item {
     max-width: 200px;
     margin: 10px 0;
     h5 {
-      color: rgb(66, 65, 71);
+      font-size: 15px;
+      color: rgb(140, 116, 235);
       margin-bottom: 5px;
     }
     p {
       margin: 10px 0;
+      color: white;
     }
   }
   &__img {
@@ -85,11 +102,12 @@ body {
   color: rgb(216, 76, 151);
 }
 span {
-  opacity: 0.5;
+  color: aliceblue;
 }
 .btn {
+  margin-top: 10px;
   padding: 10px 15px;
-  background-color: red;
+  background-color: rgba(52, 171, 189, 0.645);
   border-radius: 10px;
   border: none;
   color: antiquewhite;
@@ -109,16 +127,24 @@ body {
 .footer {
   margin-top: 5%;
   padding: 30px;
-  background: rgb(10, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(10, 0, 36, 1) 0%,
-    rgba(9, 47, 121, 1) 43%,
-    rgba(136, 0, 255, 1) 100%
-  );
+  background-color: rgba(14, 10, 19, 0.977);
 
   &__list {
-    display: flex;
-    gap: 50px;
+    width: 700px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    gap: 20px;
+  }
+}
+.foot {
+  display: flex;
+  justify-content: space-between;
+  text-align: end;
+  p {
+    color: white;
+    margin-bottom: 15px;
+  }
+  a {
+    margin-right: 25px;
   }
 }

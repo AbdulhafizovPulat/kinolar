@@ -285,7 +285,7 @@ var films = [
     overview:
       "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.",
     release_date: 1406682000,
-    genres: [],
+    genres: ["Adventure"],
   },
   {
     id: "411728",
